@@ -1,4 +1,4 @@
-import { FETCH_RANDOM_GREETING_REQUEST, FETCH_RANDOM_GREETING_SUCCESS, FETCH_RANDOM_MESSAGE_FAILURE } from '../action/greetingMessage';
+import { FETCH_RANDOM_GREETING_REQUEST, FETCH_RANDOM_GREETING_SUCCESS, FETCH_RANDOM_MESSAGE_FAILURE } from '../action/messageGreeting';
 
 const fetchRandomGreeting = () => (dispatch) => {
   dispatch({ type: FETCH_RANDOM_GREETING_REQUEST });
