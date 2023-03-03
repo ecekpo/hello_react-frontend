@@ -8,7 +8,7 @@ const fetchRandomGreeting = () => (dispatch) => {
     .then((data) => {
       dispatch({
         type: FETCH_RANDOM_GREETING_SUCCESS,
-        payload: data.content,
+        payload: data.text,
       });
     })
     .catch((error) => {

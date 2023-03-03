@@ -3,20 +3,20 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import fetchRandomGreeting from '../api/fetchGreetings';
 
-const Greeting = ({ text, fetchRandomGreeting }) => {
+const Greeting = ({ message, fetchRandomGreeting }) => {
   useEffect(() => {
     fetchRandomGreeting();
   }, [fetchRandomGreeting]);
 
   return (
     <div className="container">
-      <h1 className="text">{text}</h1>
+      <h1 className="greeting">{message}</h1>
     </div>
   );
 };
 
 const mapStateToProps = (state) => ({
-  message: state.greeting.text,
+  message: state.greeting.message,
 });
 
 Greeting.propTypes = {
@@ -25,7 +25,7 @@ Greeting.propTypes = {
 };
 
 Greeting.defaultProps = {
-  text: 'Hello there!',
+  message: 'Hello there!',
   fetchRandomGreeting: undefined,
 };
 
